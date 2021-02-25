@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { DlgMovimientoComponent } from './components/dlg-movimiento/dlg-movimiento.component';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { ReporteComponent } from './components/reporte/reporte.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/d
     GridclienteComponent,
     GridcuentaComponent,
     CuentaComponent,
-    DlgMovimientoComponent
+    DlgMovimientoComponent,
+    ReporteComponent
 
   ],
   imports: [

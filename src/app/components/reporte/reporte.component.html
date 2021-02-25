@@ -1,0 +1,52 @@
+<div class="container">
+    <br/>
+    <h1>Reporte de cuenta</h1>
+
+    <div class="col-lg-8 col-md-12 col-sm-12">
+        <label>Cliente</label>
+        <select class="form-control col-md-4" [(ngModel)]="idcliente">
+          <option *ngFor="let cliente of clientes" [value]="cliente.id">
+            {{cliente.nombre}}
+          </option>
+
+        </select>
+        <label>Desde</label>
+        <input type="date" [(ngModel)]="fechadesde" class="form-control col-md-3" />
+        <label>Hasta</label>
+        <input type="date" [(ngModel)]="fechahasta" class="form-control col-md-3" />
+        <div class="boton">
+            <button class="btn btn-primary" (click)="populateReporte()">Consultar</button>
+        </div>
+
+    </div>
+
+    <br/>
+
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Cliente</th>
+                <th scope="col">Cuenta</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let dato of reporte; let i = index">
+                <tr>
+                    <td>{{dato.cliente}}</td>
+                    <td>{{dato.cuenta}}</td>
+                    <td>{{dato.tipomovimiento}}</td>
+                    <td>{{dato.fecha}}</td>
+                    <td align="right">{{dato.valor | currency: 'COP '}}</td>
+
+                </tr>
+
+            </ng-container>
+        </tbody>
+
+
+
+    </table>
+</div>
