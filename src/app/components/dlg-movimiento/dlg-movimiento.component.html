@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+    <h1>Movimiento</h1>
+    <div class="form-group">
+        <label>Tipo de Movimiento</label>
+        <select class="form-control" [(ngModel)]="data.tipo">
+            <option value="1">Débito</option>
+            <option value="2">Crédito</option>
+        </select>
+    </div>
+
+    <label>Monto del Movimiento</label>
+    <input class="form-control" [(ngModel)]="data.valor">
+</div>
+<br/>
+<div style="text-align: center">
+    <button class="btn btn-info" [mat-dialog-close] cdkFocusInitial>Cancelar</button>
+    <button class="btn btn-primary" [mat-dialog-close]="data.saldo" (click)="onNoClick()">Agregar Movimiento</button>
+</div>

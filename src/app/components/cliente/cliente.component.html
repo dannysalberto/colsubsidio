@@ -1,0 +1,25 @@
+<div class="form-containter">
+    <h1 class="Cliente"></h1>
+    <div class="container-fluid col-md-6">
+        <form [formGroup]="clienteForm" (ngSubmit)="onSaveForm()">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input class="form-control col-md-12" type="text" formControlName="nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Dirección</label>
+                <input class="form-control col-md-12" type="text" formControlName="direccion">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Teléfono</label>
+                <input class="form-control col-md-12" type="text" formControlName="telefono">
+            </div>
+            <button type="submit" class="btn-send boton" (click)="onSaveForm()">Enviar</button>
+        </form>
+        <br/>
+        <gridcuenta [cliente]="cliente"></gridcuenta>
+    </div>
+
+</div>

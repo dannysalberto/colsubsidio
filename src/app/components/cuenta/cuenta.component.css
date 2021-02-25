@@ -1,0 +1,25 @@
+input {
+    margin-right: 5px;
+}
+
+.cuenta {
+    border: 1px solid;
+    height: 35px;
+    margin-left: 1px;
+    padding-left: 0px;
+    width: 60%;
+}
+
+.saldo {
+    border: 1px solid;
+    height: 35px;
+    margin-left: 1px;
+    padding-left: 0px;
+    width: 20%;
+}
+
+.boton {
+    width: 85px;
+    height: 35px;
+    margin-left: 15px;
+}

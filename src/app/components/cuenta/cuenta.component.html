@@ -1,0 +1,6 @@
+<form [formGroup]="cuentaForm" (ngSubmit)="onSaveForm()">
+    <input type="text" class="cuenta" formControlName="cuenta">
+    <input type="text" class="saldo" formControlName="saldo" readonly>
+    <button type="submit" class="btn-primary boton">Enviar</button>
+</form>
+<br/>
